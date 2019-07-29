@@ -1,0 +1,28 @@
+<header>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="{% url 'posts:list_post' %}">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'posts:create_post' %}">Postar</a>
+            </li>
+            
+            {% if not request.user.is_authenticated %} 
+            <li>
+                <a href=" {% url 'users:signup' %}">SignUp</a>
+            </li>          
+            <li>
+                <a href="{% url 'users:login_user' %}">Login</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="{% url 'users:detail_user' user.id %}">{{request.user.username}}</a>
+            </li>
+            <li>
+                <a href="{% url 'users:logout_user' %}">Logout</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>

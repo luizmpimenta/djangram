@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ 
+ {% block title %}
+     Djangram  | Sign Up 
+ {% endblock title %}
+ 
+ {% block body %}
+ <section>
+        <div>
+            <form method="POST">
+               {% csrf_token %}
+   
+                {{form.as_p}}
+   
+                <input type="submit" value="Signup">
+   
+            </form>
+        </div>
+    </section>
+     
+ {% endblock body %}
+     
+
+ 
+ 
+     
+ 
+     
+     

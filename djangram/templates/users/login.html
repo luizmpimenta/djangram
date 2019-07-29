@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %} Djangram | Login {% endblock title %}
+
+
+{% block body %}
+    <section class="login-section">
+        <div class="login-container">
+            <form method="POST">
+                {% csrf_token %}
+
+                {{form.as_p}}
+                
+                <input type="submit" value="logar">
+            </form>
+        </div>
+    </section>
+{% endblock body %}
+    
+    
