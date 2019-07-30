@@ -1,0 +1,13 @@
+{% block subject %}
+ Djangram | Cadastro feito com sucesso 
+{% endblock subject %}
+
+{% block html %}
+<p>Ola , <b>{{user.username}}</b></p>
+
+<p>Seu cadastro com o email <b>{{user.email}}</b>
+    foi realizado!
+</p>
+<p>Bem vindo ao Djangram</p>
+
+{% endblock html %}

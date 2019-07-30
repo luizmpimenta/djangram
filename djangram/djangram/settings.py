@@ -136,3 +136,13 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
+#Template Emails
+TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True 
+EMAIL_HOST_USER = 'lmtesteprojetos@gmail.com'
+EMAIL_HOST_PASSWORD = 'testeprojetos'
+TEMPLATED_EMAIL_TEMPLATE_DIR = 'templated_email/' 
+TEMPLATED_EMAIL_FILE_EXTENSION = 'email'
+

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Djangram | Detalhe do Post
+{% endblock title %}
+
+
+{% block body %}
+    <section>
+        <div>
+            <a href="{% url 'posts:delete_post' post.pk %}">Deletar</a>
+            <p>Author: {{post.author}}</p>
+            <img src="{{post.image.url}}" width="80px" height="80px">
+            <p>Descrição: {{post.description}}</p>
+            <h2>Comentarios </h2>
+            
+            {% if posts.commentsFromPost %}
+                            
+            {% for comment in post.commentsFromPost.all %}
+                <p>{{comment.text}}</p>  
+            {% empty %}
+                <p>Este post nao tem comentarios</p>
+            {% endfor %}
+            {% endif %} 
+                
+        </div>
+    </section>
+{% endblock body %}
+    
+    
