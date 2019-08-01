@@ -26,7 +26,7 @@ urlpatterns = [
     path('',include('core.urls')),
     path('',include('posts.urls')),
     path('',include('users.urls')),
-    
+    path('',include('social_django.urls',namespace='social')),    
 ]
 
 if settings.DEBUG:
