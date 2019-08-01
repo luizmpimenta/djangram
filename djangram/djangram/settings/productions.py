@@ -5,7 +5,9 @@ SECRET_KEY = 'tu*^paym)n1w^r67-!wu5o$=$kt*tq0jdd#8_^a$n7mw3ga=au'
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.herokuapp.com',
+]
 
 MIDDLEWARE.insert(
     MIDDLEWARE.index('django.middleware.security.SecurityMiddleware') + 1,
@@ -13,6 +15,7 @@ MIDDLEWARE.insert(
 )
 
 DATABASES = {
+            
 
 }
 
