@@ -17,5 +17,9 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = config('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER',default='')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD',default='')
 
+#DROPBOX STORAGE
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = config('DROPBOX_OAUTH2_TOKEN',default='')
+
 
 django_heroku.settings(locals())
